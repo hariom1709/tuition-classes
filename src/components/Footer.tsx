@@ -1,15 +1,12 @@
-
 import { Phone, Mail, MapPin, Facebook, Instagram, Twitter } from "lucide-react";
 import { Link } from "react-router-dom";
-
 const Footer = () => {
-  return (
-    <footer className="bg-gray-900 text-white">
+  return <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Excellence Tuition</h3>
+            <h3 className="text-lg font-semibold mb-4">SS Classes</h3>
             <p className="text-gray-300 mb-4">
               Providing quality education and personalized learning experiences for students across all levels.
             </p>
@@ -63,19 +60,13 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Privacy Policy
-                </a>
+                
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Terms of Service
-                </a>
+                
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  FAQ
-                </a>
+                
               </li>
             </ul>
           </div>
@@ -90,7 +81,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-blue-400" />
-                <span className="text-gray-300">info@excellencetuition.com</span>
+                <span className="text-gray-300">info@ssclasses.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-blue-400" />
@@ -106,8 +97,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;

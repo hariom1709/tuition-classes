@@ -1,41 +1,25 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 import { GraduationCap, Users, BookOpen, Trophy, CheckCircle } from "lucide-react";
-
 const Index = () => {
-  const features = [
-    {
-      icon: <Users className="h-8 w-8 text-blue-600" />,
-      title: "Expert Faculty",
-      description: "Learn from experienced teachers with proven track records"
-    },
-    {
-      icon: <BookOpen className="h-8 w-8 text-green-600" />,
-      title: "Comprehensive Courses",
-      description: "Complete coverage of Mathematics, Physics, Chemistry, and Biology"
-    },
-    {
-      icon: <Trophy className="h-8 w-8 text-yellow-600" />,
-      title: "Proven Results",
-      description: "High success rates and excellent student performance"
-    }
-  ];
-
-  const benefits = [
-    "Small batch sizes for personalized attention",
-    "Regular assessments and progress tracking",
-    "Flexible timing options",
-    "Affordable fee structure",
-    "Experienced and qualified teachers",
-    "Study materials provided"
-  ];
-
-  return (
-    <div className="min-h-screen bg-gray-50">
+  const features = [{
+    icon: <Users className="h-8 w-8 text-blue-600" />,
+    title: "Expert Faculty",
+    description: "Learn from experienced teachers with proven track records"
+  }, {
+    icon: <BookOpen className="h-8 w-8 text-green-600" />,
+    title: "Comprehensive Courses",
+    description: "Complete coverage of Mathematics, Physics, Chemistry, and Biology"
+  }, {
+    icon: <Trophy className="h-8 w-8 text-yellow-600" />,
+    title: "Proven Results",
+    description: "High success rates and excellent student performance"
+  }];
+  const benefits = ["Small batch sizes for personalized attention", "Regular assessments and progress tracking", "Flexible timing options", "Affordable fee structure", "Experienced and qualified teachers", "Study materials provided"];
+  return <div className="min-h-screen bg-gray-50">
       <Navigation />
       
       {/* Hero Section */}
@@ -45,9 +29,7 @@ const Index = () => {
             <div className="flex justify-center mb-6">
               <GraduationCap className="h-16 w-16 text-blue-200" />
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Excellence in Education
-            </h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">LEARN FROM EXPERTS</h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
               Unlock your potential with our expert tuition classes. 
               Quality education for Mathematics, Physics, Chemistry, and Biology.
@@ -59,9 +41,7 @@ const Index = () => {
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 text-lg">
-                  Enroll Now
-                </Button>
+                
               </Link>
             </div>
           </div>
@@ -72,17 +52,14 @@ const Index = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Excellence Tuition?
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Our Classes?</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               We provide exceptional learning experiences tailored to each student's needs
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow duration-300">
+            {features.map((feature, index) => <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow duration-300">
                 <CardContent className="pt-6">
                   <div className="flex justify-center mb-4">
                     {feature.icon}
@@ -90,8 +67,7 @@ const Index = () => {
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600">{feature.description}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -108,21 +84,15 @@ const Index = () => {
                 At Excellence Tuition, we believe in nurturing each student's unique potential through personalized attention and proven teaching methodologies.
               </p>
               <div className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-center space-x-3">
+                {benefits.map((benefit, index) => <div key={index} className="flex items-center space-x-3">
                     <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
                     <span className="text-gray-700">{benefit}</span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
             <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
-                alt="Students studying"
-                className="rounded-lg shadow-xl"
-              />
-              <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-transparent rounded-lg"></div>
+              
+              
             </div>
           </div>
         </div>
@@ -146,8 +116,6 @@ const Index = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
