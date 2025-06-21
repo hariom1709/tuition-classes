@@ -23,7 +23,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <img src="/lovable-uploads/fc89be7b-b202-4b15-951d-3f783dc73fe1.png" alt="SS Classes Logo" className="h-100 w-auto object-fill" />
+            <img src="/lovable-uploads/fc89be7b-b202-4b15-951d-3f783dc73fe1.png" alt="SS Classes Logo" className="h-10 w-auto object-contain" />
           </Link>
 
           {/* Desktop Navigation */}
