@@ -1,9 +1,11 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 import { GraduationCap, Users, BookOpen, Trophy, CheckCircle } from "lucide-react";
+
 const Index = () => {
   const features = [{
     icon: <Users className="h-8 w-8 text-blue-600" />,
@@ -18,7 +20,9 @@ const Index = () => {
     title: "Proven Results",
     description: "High success rates and excellent student performance"
   }];
+
   const benefits = ["Small batch sizes for personalized attention", "Regular assessments and progress tracking", "Flexible timing options", "Affordable fee structure", "Experienced and qualified teachers", "Study materials provided"];
+
   return <div className="min-h-screen bg-gray-50">
       <Navigation />
       
@@ -40,8 +44,10 @@ const Index = () => {
                   View Courses
                 </Button>
               </Link>
-              <Link to="/contact">
-                
+              <Link to="/results">
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 text-lg">
+                  View Results
+                </Button>
               </Link>
             </div>
           </div>
@@ -59,15 +65,24 @@ const Index = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {features.map((feature, index) => <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow duration-300">
+            {features.map((feature, index) => (
+              <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow duration-300">
                 <CardContent className="pt-6">
                   <div className="flex justify-center mb-4">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600">{feature.description}</p>
+                  {feature.title === "Proven Results" && (
+                    <Link to="/results" className="inline-block mt-3">
+                      <Button variant="outline" size="sm">
+                        View Results
+                      </Button>
+                    </Link>
+                  )}
                 </CardContent>
-              </Card>)}
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -107,15 +122,23 @@ const Index = () => {
           <p className="text-xl mb-8 text-blue-100">
             Join hundreds of successful students who have achieved their academic goals with us
           </p>
-          <Link to="/contact">
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-3 text-lg">
-              Enroll Today
-            </Button>
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/results">
+              <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-3 text-lg">
+                View Our Results
+              </Button>
+            </Link>
+            <Link to="/courses">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 text-lg">
+                Enroll Today
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
       <Footer />
     </div>;
 };
+
 export default Index;
