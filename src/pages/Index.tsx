@@ -27,7 +27,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <div className="flex justify-center mb-6">
-              <GraduationCap className="h-16 w-16 text-blue-200" />
+              
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">LEARN FROM EXPERTS</h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
