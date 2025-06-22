@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -10,7 +9,7 @@ const Faculties = () => {
       id: 1,
       name: "Shiv Sharma",
       subject: "Chemistry",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
+      image: "/lovable-uploads/8d636d02-cbbd-43f3-bf34-a1de1c711b5b.png",
       qualifications: ["B.Sc.", "M.Sc.", "B.Ed.", "M.Ed."],
       experience: "8+ years",
       specialization: "Organic & Inorganic Chemistry, JEE/NEET Preparation",
