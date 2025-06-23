@@ -38,14 +38,10 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/faculties" className="text-gray-300 hover:text-white transition-colors">
-                  Faculties
-                </Link>
+                
               </li>
               <li>
-                <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
-                  Contact
-                </Link>
+                
               </li>
             </ul>
           </div>
@@ -73,11 +69,11 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">+91 83079 27661</h3>
+            <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-blue-400" />
-                <span className="text-gray-300">onedayiws03@gmail.com</span>
+                <span className="text-gray-300">8307361315</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-blue-400" />
