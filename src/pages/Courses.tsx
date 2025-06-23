@@ -11,7 +11,7 @@ const Courses = () => {
     {
       id: 1,
       title: "Mathematics",
-      subtitle: "Class 6-10",
+      subtitle: "Class 6-12",
       icon: <Calculator className="h-12 w-12 text-blue-600" />,
       description: "Comprehensive mathematics program covering algebra, geometry, trigonometry, and problem-solving techniques for middle and high school students.",
       features: [
@@ -28,7 +28,7 @@ const Courses = () => {
     {
       id: 2,
       title: "Chemistry",
-      subtitle: "Class 11-12",
+      subtitle: "Class 6-12",
       icon: <Atom className="h-12 w-12 text-green-600" />,
       description: "In-depth chemistry curriculum covering organic, inorganic, and physical chemistry with practical applications and JEE/NEET preparation.",
       features: [
@@ -45,7 +45,7 @@ const Courses = () => {
     {
       id: 3,
       title: "Physics",
-      subtitle: "Class 11-12",
+      subtitle: "Class 6-12",
       icon: <Zap className="h-12 w-12 text-yellow-600" />,
       description: "Advanced physics concepts including mechanics, thermodynamics, electromagnetism, and modern physics with problem-solving emphasis.",
       features: [
@@ -62,7 +62,7 @@ const Courses = () => {
     {
       id: 4,
       title: "Biology",
-      subtitle: "Class 11-12",
+      subtitle: "Class 6-12",
       icon: <Microscope className="h-12 w-12 text-red-600" />,
       description: "Comprehensive biology program covering botany, zoology, and human physiology with special focus on NEET preparation.",
       features: [
