@@ -1,41 +1,25 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 import { GraduationCap, Users, BookOpen, Trophy, CheckCircle } from "lucide-react";
-
 const Index = () => {
-  const features = [
-    {
-      icon: <Users className="h-6 w-6 sm:h-8 sm:w-8 text-blue-600" />,
-      title: "Expert Faculty",
-      description: "Learn from experienced teachers with proven track records"
-    },
-    {
-      icon: <BookOpen className="h-6 w-6 sm:h-8 sm:w-8 text-green-600" />,
-      title: "Comprehensive Courses",
-      description: "Complete coverage of Mathematics, Physics, Chemistry, and Biology"
-    },
-    {
-      icon: <Trophy className="h-6 w-6 sm:h-8 sm:w-8 text-yellow-600" />,
-      title: "Proven Results",
-      description: "High success rates and excellent student performance"
-    }
-  ];
-
-  const benefits = [
-    "Small batch sizes for personalized attention",
-    "Regular assessments and progress tracking",
-    "Flexible timing options",
-    "Affordable fee structure",
-    "Experienced and qualified teachers",
-    "Study materials provided"
-  ];
-
-  return (
-    <div className="min-h-screen bg-gray-50">
+  const features = [{
+    icon: <Users className="h-6 w-6 sm:h-8 sm:w-8 text-blue-600" />,
+    title: "Expert Faculty",
+    description: "Learn from experienced teachers with proven track records"
+  }, {
+    icon: <BookOpen className="h-6 w-6 sm:h-8 sm:w-8 text-green-600" />,
+    title: "Comprehensive Courses",
+    description: "Complete coverage of Mathematics, Physics, Chemistry, and Biology"
+  }, {
+    icon: <Trophy className="h-6 w-6 sm:h-8 sm:w-8 text-yellow-600" />,
+    title: "Proven Results",
+    description: "High success rates and excellent student performance"
+  }];
+  const benefits = ["Small batch sizes for personalized attention", "Regular assessments and progress tracking", "Flexible timing options", "Affordable fee structure", "Experienced and qualified teachers", "Study materials provided"];
+  return <div className="min-h-screen bg-gray-50">
       <Navigation />
       
       {/* Hero Section */}
@@ -56,9 +40,7 @@ const Index = () => {
                 </Button>
               </Link>
               <Link to="/results">
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 px-6 sm:px-8 py-2 sm:py-3 text-base sm:text-lg w-full sm:w-auto min-w-[160px]">
-                  View Results
-                </Button>
+                
               </Link>
             </div>
           </div>
@@ -78,24 +60,20 @@ const Index = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {features.map((feature, index) => (
-              <Card key={index} className="text-center p-4 sm:p-6 hover:shadow-lg transition-shadow duration-300 border-0 shadow-md">
+            {features.map((feature, index) => <Card key={index} className="text-center p-4 sm:p-6 hover:shadow-lg transition-shadow duration-300 border-0 shadow-md">
                 <CardContent className="pt-4 sm:pt-6">
                   <div className="flex justify-center mb-3 sm:mb-4">
                     {feature.icon}
                   </div>
                   <h3 className="text-lg sm:text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-sm sm:text-base text-gray-600 leading-relaxed">{feature.description}</p>
-                  {feature.title === "Proven Results" && (
-                    <Link to="/results" className="inline-block mt-3">
+                  {feature.title === "Proven Results" && <Link to="/results" className="inline-block mt-3">
                       <Button variant="outline" size="sm" className="mt-2">
                         View Results
                       </Button>
-                    </Link>
-                  )}
+                    </Link>}
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -112,18 +90,14 @@ const Index = () => {
                 At SS Classes, we believe in nurturing each student's unique potential through personalized attention and proven teaching methodologies.
               </p>
               <div className="space-y-3 sm:space-y-4">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-start space-x-3">
+                {benefits.map((benefit, index) => <div key={index} className="flex items-start space-x-3">
                     <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
                     <span className="text-sm sm:text-base text-gray-700 leading-relaxed">{benefit}</span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
             <div className="relative order-1 lg:order-2">
-              <div className="aspect-square bg-gradient-to-br from-blue-100 to-green-100 rounded-2xl flex items-center justify-center">
-                <GraduationCap className="h-24 w-24 sm:h-32 sm:w-32 text-blue-600" />
-              </div>
+              
             </div>
           </div>
         </div>
@@ -145,17 +119,13 @@ const Index = () => {
               </Button>
             </Link>
             <Link to="/courses">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 px-6 sm:px-8 py-2 sm:py-3 text-base sm:text-lg w-full sm:w-auto min-w-[160px]">
-                Browse Courses
-              </Button>
+              
             </Link>
           </div>
         </div>
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
