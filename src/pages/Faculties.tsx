@@ -88,7 +88,7 @@ const Faculties = () => {
                   <img
                     src={faculty.image}
                     alt={`${faculty.name} - ${faculty.subject} Teacher`}
-                    className="w-full h-48 sm:h-64 object-cover"
+                    className="w-full h-32 sm:h-40 object-cover object-center"
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
