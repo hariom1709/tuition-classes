@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -68,45 +69,46 @@ const Faculties = () => {
       <Navigation />
       
       {/* Header Section */}
-      <section className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-16">
+      <section className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Expert Faculty</h1>
-          <p className="text-xl text-green-100 max-w-2xl mx-auto">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">Our Expert Faculty</h1>
+          <p className="text-lg sm:text-xl text-green-100 max-w-2xl mx-auto px-4">
             Meet our dedicated team of experienced educators committed to your academic success
           </p>
         </div>
       </section>
 
       {/* Faculty Grid */}
-      <section className="py-16">
+      <section className="py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
             {faculties.map((faculty) => (
               <Card key={faculty.id} className="hover:shadow-xl transition-shadow duration-300 border-0 shadow-lg overflow-hidden">
                 <div className="relative">
                   <img
                     src={faculty.image}
-                    alt={faculty.name}
-                    className="w-full h-64 object-cover"
+                    alt={`${faculty.name} - ${faculty.subject} Teacher`}
+                    className="w-full h-48 sm:h-64 object-cover"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                   <div className="absolute bottom-4 left-4 text-white">
-                    <h3 className="text-2xl font-bold">{faculty.name}</h3>
-                    <p className="text-lg opacity-90">{faculty.subject} Teacher</p>
+                    <h3 className="text-xl sm:text-2xl font-bold">{faculty.name}</h3>
+                    <p className="text-base sm:text-lg opacity-90">{faculty.subject} Teacher</p>
                   </div>
                 </div>
                 
-                <CardContent className="p-6 space-y-4">
+                <CardContent className="p-4 sm:p-6 space-y-3 sm:space-y-4">
                   {/* Qualifications */}
                   <div className="flex items-start space-x-3">
                     <GraduationCap className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">Qualifications</h4>
+                    <div className="min-w-0 flex-1">
+                      <h4 className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">Qualifications</h4>
                       <div className="flex flex-wrap gap-1">
                         {faculty.qualifications.map((qual, index) => (
                           <span
                             key={index}
-                            className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full"
+                            className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                           >
                             {qual}
                           </span>
@@ -118,31 +120,31 @@ const Faculties = () => {
                   {/* Experience */}
                   <div className="flex items-center space-x-3">
                     <Calendar className="h-5 w-5 text-green-600 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-semibold text-gray-900">Experience</h4>
-                      <p className="text-gray-600">{faculty.experience} in teaching</p>
+                    <div className="min-w-0 flex-1">
+                      <h4 className="font-semibold text-gray-900 text-sm sm:text-base">Experience</h4>
+                      <p className="text-gray-600 text-sm">{faculty.experience} in teaching</p>
                     </div>
                   </div>
 
                   {/* Specialization */}
                   <div className="flex items-start space-x-3">
                     <Award className="h-5 w-5 text-purple-600 mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">Specialization</h4>
-                      <p className="text-gray-600 text-sm">{faculty.specialization}</p>
+                    <div className="min-w-0 flex-1">
+                      <h4 className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">Specialization</h4>
+                      <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">{faculty.specialization}</p>
                     </div>
                   </div>
 
                   {/* Achievements */}
                   <div className="flex items-start space-x-3">
                     <Star className="h-5 w-5 text-yellow-600 mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Key Achievements</h4>
+                    <div className="min-w-0 flex-1">
+                      <h4 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">Key Achievements</h4>
                       <ul className="space-y-1">
                         {faculty.achievements.map((achievement, index) => (
-                          <li key={index} className="text-gray-600 text-sm flex items-start">
+                          <li key={index} className="text-gray-600 text-xs sm:text-sm flex items-start leading-relaxed">
                             <span className="w-1.5 h-1.5 bg-yellow-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
-                            {achievement}
+                            <span className="break-words">{achievement}</span>
                           </li>
                         ))}
                       </ul>
@@ -156,36 +158,36 @@ const Faculties = () => {
       </section>
 
       {/* Teaching Philosophy Section */}
-      <section className="py-16 bg-white">
+      <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Teaching Philosophy</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">Our Teaching Philosophy</h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               We believe in nurturing not just academic excellence, but also critical thinking and lifelong learning skills
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <GraduationCap className="h-8 w-8 text-blue-600" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+            <div className="text-center p-4">
+              <div className="bg-blue-100 rounded-full w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                <GraduationCap className="h-6 w-6 sm:h-8 sm:w-8 text-blue-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Personalized Learning</h3>
-              <p className="text-gray-600">Tailored teaching approaches to match each student's learning style and pace.</p>
+              <h3 className="text-lg sm:text-xl font-semibold mb-2">Personalized Learning</h3>
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">Tailored teaching approaches to match each student's learning style and pace.</p>
             </div>
-            <div className="text-center">
-              <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Award className="h-8 w-8 text-green-600" />
+            <div className="text-center p-4">
+              <div className="bg-green-100 rounded-full w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                <Award className="h-6 w-6 sm:h-8 sm:w-8 text-green-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Excellence Focused</h3>
-              <p className="text-gray-600">Commitment to achieving the highest academic standards and competitive exam success.</p>
+              <h3 className="text-lg sm:text-xl font-semibold mb-2">Excellence Focused</h3>
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">Commitment to achieving the highest academic standards and competitive exam success.</p>
             </div>
-            <div className="text-center">
-              <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Star className="h-8 w-8 text-purple-600" />
+            <div className="text-center p-4">
+              <div className="bg-purple-100 rounded-full w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                <Star className="h-6 w-6 sm:h-8 sm:w-8 text-purple-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Holistic Development</h3>
-              <p className="text-gray-600">Building confidence, problem-solving skills, and analytical thinking abilities.</p>
+              <h3 className="text-lg sm:text-xl font-semibold mb-2">Holistic Development</h3>
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">Building confidence, problem-solving skills, and analytical thinking abilities.</p>
             </div>
           </div>
         </div>
