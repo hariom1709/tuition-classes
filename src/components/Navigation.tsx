@@ -1,33 +1,23 @@
-
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-
   const isActive = (path: string) => location.pathname === path;
-
-  const navLinks = [
-    {
-      path: "/",
-      label: "Home"
-    },
-    {
-      path: "/courses",
-      label: "Courses"
-    },
-    {
-      path: "/faculties",
-      label: "Faculty"
-    },
-    {
-      path: "/results",
-      label: "Results"
-    }
-  ];
-
+  const navLinks = [{
+    path: "/",
+    label: "Home"
+  }, {
+    path: "/courses",
+    label: "Courses"
+  }, {
+    path: "/faculties",
+    label: "Faculty"
+  }, {
+    path: "/results",
+    label: "Results"
+  }];
   return <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -61,5 +51,4 @@ const Navigation = () => {
       </div>
     </nav>;
 };
-
 export default Navigation;
