@@ -1,85 +1,56 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 import { Calculator, Atom, Zap, Microscope, Clock, DollarSign, Users } from "lucide-react";
-
 const Courses = () => {
-  const courses = [
-    {
-      id: 1,
-      title: "Mathematics",
-      subtitle: "Class 6-12",
-      icon: <Calculator className="h-12 w-12 text-blue-600" />,
-      description: "Comprehensive mathematics program covering algebra, geometry, trigonometry, and problem-solving techniques for middle and high school students.",
-      features: [
-        "Complete NCERT syllabus coverage",
-        "Regular practice sessions",
-        "Conceptual clarity focus",
-        "Board exam preparation"
-      ],
-      timing: "Mon, Wed, Fri - 4:00 PM to 6:00 PM",
-      duration: "2 hours per session",
-      fee: "₹3,000/month",
-      batchSize: "15-20 students"
-    },
-    {
-      id: 2,
-      title: "Chemistry",
-      subtitle: "Class 6-12",
-      icon: <Atom className="h-12 w-12 text-green-600" />,
-      description: "In-depth chemistry curriculum covering organic, inorganic, and physical chemistry with practical applications and JEE/NEET preparation.",
-      features: [
-        "Organic & Inorganic Chemistry",
-        "Physical Chemistry concepts",
-        "Laboratory techniques",
-        "JEE/NEET preparation"
-      ],
-      timing: "Tue, Thu, Sat - 2:00 PM to 4:00 PM",
-      duration: "2 hours per session",
-      fee: "₹4,000/month",
-      batchSize: "12-15 students"
-    },
-    {
-      id: 3,
-      title: "Physics",
-      subtitle: "Class 6-12",
-      icon: <Zap className="h-12 w-12 text-yellow-600" />,
-      description: "Advanced physics concepts including mechanics, thermodynamics, electromagnetism, and modern physics with problem-solving emphasis.",
-      features: [
-        "Mechanics & Thermodynamics",
-        "Electromagnetism",
-        "Modern Physics",
-        "Numerical problem solving"
-      ],
-      timing: "Mon, Wed, Fri - 6:00 PM to 8:00 PM",
-      duration: "2 hours per session",
-      fee: "₹4,000/month",
-      batchSize: "12-15 students"
-    },
-    {
-      id: 4,
-      title: "Biology",
-      subtitle: "Class 6-12",
-      icon: <Microscope className="h-12 w-12 text-red-600" />,
-      description: "Comprehensive biology program covering botany, zoology, and human physiology with special focus on NEET preparation.",
-      features: [
-        "Botany & Zoology",
-        "Human Physiology",
-        "Genetics & Evolution",
-        "NEET preparation focus"
-      ],
-      timing: "Tue, Thu, Sat - 10:00 AM to 12:00 PM",
-      duration: "2 hours per session",
-      fee: "₹4,000/month",
-      batchSize: "12-15 students"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gray-50">
+  const courses = [{
+    id: 1,
+    title: "Mathematics",
+    subtitle: "Class 6-12",
+    icon: <Calculator className="h-12 w-12 text-blue-600" />,
+    description: "Comprehensive mathematics program covering algebra, geometry, trigonometry, and problem-solving techniques for middle and high school students.",
+    features: ["Complete NCERT syllabus coverage", "Regular practice sessions", "Conceptual clarity focus", "Board exam preparation"],
+    timing: "Mon, Wed, Fri - 4:00 PM to 6:00 PM",
+    duration: "2 hours per session",
+    fee: "₹3,000/month",
+    batchSize: "15-20 students"
+  }, {
+    id: 2,
+    title: "Chemistry",
+    subtitle: "Class 6-12",
+    icon: <Atom className="h-12 w-12 text-green-600" />,
+    description: "In-depth chemistry curriculum covering organic, inorganic, and physical chemistry with practical applications and JEE/NEET preparation.",
+    features: ["Organic & Inorganic Chemistry", "Physical Chemistry concepts", "Laboratory techniques", "JEE/NEET preparation"],
+    timing: "Tue, Thu, Sat - 2:00 PM to 4:00 PM",
+    duration: "2 hours per session",
+    fee: "₹4,000/month",
+    batchSize: "12-15 students"
+  }, {
+    id: 3,
+    title: "Physics",
+    subtitle: "Class 6-12",
+    icon: <Zap className="h-12 w-12 text-yellow-600" />,
+    description: "Advanced physics concepts including mechanics, thermodynamics, electromagnetism, and modern physics with problem-solving emphasis.",
+    features: ["Mechanics & Thermodynamics", "Electromagnetism", "Modern Physics", "Numerical problem solving"],
+    timing: "Mon, Wed, Fri - 6:00 PM to 8:00 PM",
+    duration: "2 hours per session",
+    fee: "₹4,000/month",
+    batchSize: "12-15 students"
+  }, {
+    id: 4,
+    title: "Biology",
+    subtitle: "Class 6-12",
+    icon: <Microscope className="h-12 w-12 text-red-600" />,
+    description: "Comprehensive biology program covering botany, zoology, and human physiology with special focus on NEET preparation.",
+    features: ["Botany & Zoology", "Human Physiology", "Genetics & Evolution", "NEET preparation focus"],
+    timing: "Tue, Thu, Sat - 10:00 AM to 12:00 PM",
+    duration: "2 hours per session",
+    fee: "₹4,000/month",
+    batchSize: "12-15 students"
+  }];
+  return <div className="min-h-screen bg-gray-50">
       <Navigation />
       
       {/* Header Section */}
@@ -96,8 +67,7 @@ const Courses = () => {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {courses.map((course) => (
-              <Card key={course.id} className="hover:shadow-xl transition-shadow duration-300 border-0 shadow-lg">
+            {courses.map(course => <Card key={course.id} className="hover:shadow-xl transition-shadow duration-300 border-0 shadow-lg">
                 <CardHeader className="text-center pb-4">
                   <div className="flex justify-center mb-4">
                     {course.icon}
@@ -114,12 +84,10 @@ const Courses = () => {
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">What You'll Learn:</h4>
                     <ul className="space-y-1">
-                      {course.features.map((feature, index) => (
-                        <li key={index} className="text-gray-600 text-sm flex items-center">
+                      {course.features.map((feature, index) => <li key={index} className="text-gray-600 text-sm flex items-center">
                           <span className="w-2 h-2 bg-blue-500 rounded-full mr-2 flex-shrink-0"></span>
                           {feature}
-                        </li>
-                      ))}
+                        </li>)}
                     </ul>
                   </div>
 
@@ -157,14 +125,11 @@ const Courses = () => {
 
                   <div className="pt-4">
                     <Link to="/contact">
-                      <Button className="w-full bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700">
-                        Enroll Now
-                      </Button>
+                      
                     </Link>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -200,8 +165,6 @@ const Courses = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Courses;
