@@ -2,43 +2,36 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Trophy, Award, Star, Calendar, BookOpen } from "lucide-react";
-
 const Results = () => {
-  const toppers = [
-    {
-      id: 1,
-      name: "Hari Om",
-      subject: "Chemistry",
-      score: 95,
-      class: "12th",
-      board: "CBSE",
-      year: "2023-24",
-      image: "/lovable-uploads/2fe22783-5d5b-41fa-9870-27e380f8aa1c.png"
-    },
-    {
-      id: 2,
-      name: "Tushar",
-      subject: "Chemistry",
-      score: 95,
-      class: "12th",
-      board: "CBSE",
-      year: "2023-24",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80"
-    },
-    {
-      id: 3,
-      name: "Tarun",
-      subject: "Mathematics",
-      score: 90,
-      class: "12th",
-      board: "CBSE",
-      year: "2024-25",
-      image: "/lovable-uploads/5bcf21ee-db03-4b5f-a8de-58307437bad9.png"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gray-50">
+  const toppers = [{
+    id: 1,
+    name: "Hari Om",
+    subject: "Chemistry",
+    score: 95,
+    class: "12th",
+    board: "CBSE",
+    year: "2023-24",
+    image: "/lovable-uploads/2fe22783-5d5b-41fa-9870-27e380f8aa1c.png"
+  }, {
+    id: 2,
+    name: "Tushar",
+    subject: "Chemistry",
+    score: 95,
+    class: "12th",
+    board: "CBSE",
+    year: "2023-24",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80"
+  }, {
+    id: 3,
+    name: "Tarun",
+    subject: "Mathematics",
+    score: 90,
+    class: "12th",
+    board: "CBSE",
+    year: "2024-25",
+    image: "/lovable-uploads/5bcf21ee-db03-4b5f-a8de-58307437bad9.png"
+  }];
+  return <div className="min-h-screen bg-gray-50">
       <Navigation />
       
       {/* Header Section */}
@@ -63,14 +56,9 @@ const Results = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {toppers.map((student) => (
-              <Card key={student.id} className="shadow-lg border-0 overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            {toppers.map(student => <Card key={student.id} className="shadow-lg border-0 overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <div className="relative">
-                  <img
-                    src={student.image}
-                    alt={student.name}
-                    className="w-full h-48 object-cover"
-                  />
+                  <img src={student.image} alt={student.name} className="w-full h-48 object-scale-down" />
                   <div className="absolute top-4 right-4 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full font-bold text-sm">
                     <Star className="h-4 w-4 inline mr-1" />
                     {student.score}%
@@ -108,8 +96,7 @@ const Results = () => {
                     <span>Score: {student.score}%</span>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
 
           {/* Statistics Section */}
@@ -134,8 +121,6 @@ const Results = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Results;
