@@ -88,13 +88,13 @@ const Faculties = () => {
                   <img
                     src={faculty.image}
                     alt={`${faculty.name} - ${faculty.subject} Teacher`}
-                    className="w-full h-32 sm:h-40 object-cover object-center"
+                    className="w-full h-24 sm:h-28 object-cover object-center"
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                  <div className="absolute bottom-4 left-4 text-white">
-                    <h3 className="text-xl sm:text-2xl font-bold">{faculty.name}</h3>
-                    <p className="text-base sm:text-lg opacity-90">{faculty.subject} Teacher</p>
+                  <div className="absolute bottom-2 left-3 text-white">
+                    <h3 className="text-lg sm:text-xl font-bold">{faculty.name}</h3>
+                    <p className="text-sm sm:text-base opacity-90">{faculty.subject} Teacher</p>
                   </div>
                 </div>
                 
