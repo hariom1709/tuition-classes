@@ -52,7 +52,7 @@ const Faculties = () => {
       name: "Divya",
       subject: "Biology",
       image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=400&q=80",
-      qualifications: ["M.Sc. Botany", "B.Ed.", "Ph.D. (pursuing)"],
+      qualifications: ["M.Sc. Botany", "B.Ed."],
       experience: "5+ years",
       specialization: "Botany, Zoology, Human Physiology, NEET Preparation",
       achievements: [
