@@ -21,13 +21,14 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-14 sm:h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 flex-shrink-0">
+          <Link to="/" className="flex items-center space-x-3 flex-shrink-0">
             <img 
               src="/lovable-uploads/fc89be7b-b202-4b15-951d-3f783dc73fe1.png" 
               alt="SS Classes Logo" 
               className="h-8 sm:h-10 w-auto object-contain" 
               loading="eager"
             />
+            <span className="text-xl sm:text-2xl font-bold text-gray-900">SS Classes</span>
           </Link>
 
           {/* Desktop Navigation */}
