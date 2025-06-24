@@ -102,8 +102,8 @@ const Results = () => {
                 <div className="text-gray-600">Average Success Rate</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-green-600 mb-2">100+</div>
-                <div className="text-gray-600">Students Qualified</div>
+                
+                
               </div>
               <div>
                 <div className="text-4xl font-bold text-yellow-600 mb-2">90+</div>
