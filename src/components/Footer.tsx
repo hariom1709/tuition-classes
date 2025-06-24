@@ -51,31 +51,7 @@ const Footer = () => {
           </div>
 
           {/* Important Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-3 sm:mb-4">Important</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm sm:text-base">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm sm:text-base">
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm sm:text-base">
-                  Terms of Service
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm sm:text-base">
-                  Contact Us
-                </a>
-              </li>
-            </ul>
-          </div>
+          
 
           {/* Contact Info */}
           <div>
