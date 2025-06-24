@@ -82,13 +82,7 @@ const Results = () => {
                       <span className="text-gray-600">Board:</span>
                       <span className="font-semibold">{student.board}</span>
                     </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-600">Year:</span>
-                      <div className="flex items-center space-x-1">
-                        <Calendar className="h-4 w-4 text-green-600" />
-                        <span className="font-semibold">{student.year}</span>
-                      </div>
-                    </div>
+                    
                   </div>
                   
                   <div className="flex items-center justify-center space-x-2 text-green-600 font-bold text-lg">
