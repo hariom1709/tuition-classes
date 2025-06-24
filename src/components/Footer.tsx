@@ -71,9 +71,7 @@ const Footer = () => {
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-blue-400 flex-shrink-0 mt-0.5" />
-                <span className="text-gray-300 text-sm sm:text-base">
-                  Rajouri Garden, New Delhi
-                </span>
+                <span className="text-gray-300 text-sm sm:text-base">Basement, Muthoot finance bank Gali no. 7 Bharat colony Faridabad</span>
               </div>
             </div>
           </div>
