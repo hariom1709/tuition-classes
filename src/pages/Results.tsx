@@ -20,7 +20,7 @@ const Results = () => {
     class: "12th",
     board: "CBSE",
     year: "2023-24",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80"
+    image: "/lovable-uploads/f5865582-6a26-4e4a-b37b-5f0a9b073222.png"
   }, {
     id: 3,
     name: "Tarun",
@@ -108,8 +108,8 @@ const Results = () => {
                 <div className="text-gray-600">Average Success Rate</div>
               </div>
               <div>
-                
-                
+                <div className="text-4xl font-bold text-green-600 mb-2">100+</div>
+                <div className="text-gray-600">Students Qualified</div>
               </div>
               <div>
                 <div className="text-4xl font-bold text-yellow-600 mb-2">90+</div>

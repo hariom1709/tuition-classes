@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -52,7 +51,7 @@ const Faculties = () => {
       id: 4,
       name: "Divya",
       subject: "Biology",
-      image: "https://images.unsplash.com/photo-1594824481315-0e3a7c7a86c6?auto=format&fit=crop&w=400&q=80",
+      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=400&q=80",
       qualifications: ["M.Sc. Botany", "B.Ed.", "Ph.D. (pursuing)"],
       experience: "5+ years",
       specialization: "Botany, Zoology, Human Physiology, NEET Preparation",
