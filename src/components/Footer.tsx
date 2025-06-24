@@ -1,7 +1,10 @@
+
 import { Phone, Mail, MapPin, Facebook, Instagram, Twitter } from "lucide-react";
 import { Link } from "react-router-dom";
+
 const Footer = () => {
-  return <footer className="bg-gray-900 text-white">
+  return (
+    <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {/* Company Info */}
@@ -14,7 +17,13 @@ const Footer = () => {
               <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors duration-200" aria-label="Facebook">
                 
               </a>
-              <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors duration-200" aria-label="Instagram">
+              <a 
+                href="https://www.instagram.com/ss._.classes/?hl=en" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-gray-300 hover:text-blue-400 transition-colors duration-200" 
+                aria-label="Instagram"
+              >
                 <Instagram className="h-5 w-5" />
               </a>
               <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors duration-200" aria-label="Twitter">
@@ -70,8 +79,16 @@ const Footer = () => {
                 </a>
               </div>
               <div className="flex items-start space-x-3">
-                <MapPin className="h-5 w-5 text-blue-400 flex-shrink-0 mt-0.5" />
-                <span className="text-gray-300 text-sm sm:text-base">Basement, Muthoot finance bank Gali no. 7 Bharat colony Faridabad</span>
+                <a 
+                  href="https://www.google.com/maps/place/28%C2%B025'18.1%22N+77%C2%B020'18.3%22E/@28.4217018,77.3358495,17z/data=!3m1!4b1!4m4!3m3!8m2!3d28.4217018!4d77.3384244?entry=ttu&g_ep=EgoyMDI1MDYxNy4wIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start space-x-3 text-gray-300 hover:text-white transition-colors duration-200"
+                  aria-label="View location on Google Maps"
+                >
+                  <MapPin className="h-5 w-5 text-blue-400 flex-shrink-0 mt-0.5" />
+                  <span className="text-sm sm:text-base">Basement, Muthoot finance bank Gali no. 7 Bharat colony Faridabad</span>
+                </a>
               </div>
             </div>
           </div>
@@ -83,6 +100,8 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;
