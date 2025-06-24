@@ -92,36 +92,7 @@ const Courses = () => {
                   </div>
 
                   {/* Course Details */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
-                    <div className="flex items-center space-x-2">
-                      <Clock className="h-4 w-4 text-blue-600" />
-                      <div>
-                        <p className="font-medium text-gray-900">Timing</p>
-                        <p className="text-gray-600">{course.timing}</p>
-                      </div>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <DollarSign className="h-4 w-4 text-green-600" />
-                      <div>
-                        <p className="font-medium text-gray-900">Fee</p>
-                        <p className="text-gray-600">{course.fee}</p>
-                      </div>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Users className="h-4 w-4 text-purple-600" />
-                      <div>
-                        <p className="font-medium text-gray-900">Batch Size</p>
-                        <p className="text-gray-600">{course.batchSize}</p>
-                      </div>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Clock className="h-4 w-4 text-orange-600" />
-                      <div>
-                        <p className="font-medium text-gray-900">Duration</p>
-                        <p className="text-gray-600">{course.duration}</p>
-                      </div>
-                    </div>
-                  </div>
+                  
 
                   <div className="pt-4">
                     <Link to="/contact">
