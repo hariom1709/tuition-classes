@@ -11,7 +11,7 @@ const Faculties = () => {
       subject: "Chemistry",
       image: "/lovable-uploads/8d636d02-cbbd-43f3-bf34-a1de1c711b5b.png",
       qualifications: ["B.Sc.", "M.Sc.", "B.Ed.", "M.Ed."],
-      experience: "8+ years",
+      experience: "4+ years",
       specialization: "Organic & Inorganic Chemistry, JEE/NEET Preparation",
       achievements: [
         "95% success rate in board exams",
@@ -24,8 +24,8 @@ const Faculties = () => {
       name: "Aakash Mittal",
       subject: "Mathematics",
       image: "/lovable-uploads/6ba841bd-b730-4e95-8f6d-433fe1f9d406.png",
-      qualifications: ["B.Tech", "M.Tech", "B.Ed."],
-      experience: "6+ years",
+      qualifications: ["B.Tech", "MBA"],
+      experience: "7+ years",
       specialization: "Algebra, Geometry, Trigonometry, Calculus",
       achievements: [
         "Innovative teaching methodologies",
@@ -38,8 +38,8 @@ const Faculties = () => {
       name: "Nishant",
       subject: "Physics",
       image: "/lovable-uploads/2b534efa-7fac-4aa7-ad02-685d559a6c95.png",
-      qualifications: ["M.Sc. Physics", "B.Ed."],
-      experience: "7+ years",
+      qualifications: ["B.Sc.", "B.Ed."],
+      experience: "2+ years",
       specialization: "Mechanics, Electromagnetism, Modern Physics",
       achievements: [
         "Physics Olympiad coach",
@@ -52,7 +52,7 @@ const Faculties = () => {
       name: "Divya",
       subject: "Biology",
       image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=400&q=80",
-      qualifications: ["M.Sc. Botany", "B.Ed."],
+      qualifications: ["B.Sc.", "M.Sc.", "B.Ed."],
       experience: "5+ years",
       specialization: "Botany, Zoology, Human Physiology, NEET Preparation",
       achievements: [
